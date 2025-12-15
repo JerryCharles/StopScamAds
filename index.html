@@ -219,30 +219,48 @@
   <div class="caution-tape"></div>
 
   <!-- HERO SECTION -->
-  <section class="relative text-center py-12 md:py-16 px-4 md:px-6 bg-gradient-to-br from-red-50 via-white to-yellow-50 shadow-2xl overflow-hidden">
-    <!-- Alert background pattern -->
-    <div class="absolute inset-0 dark-pattern opacity-50"></div>
-    
-    <!-- Red alert bars -->
-    <div class="absolute top-0 left-0 w-2 h-full bg-red-600"></div>
-    <div class="absolute top-0 right-0 w-2 h-full bg-red-600"></div>
-    
-    <div class="relative z-10">
-      <div class="inline-block p-3 bg-white rounded-full shadow-xl mb-4 md:mb-6 pulse-warning">
-        <img src="https://berry.b-cdn.net/images/logo.png" class="w-20 md:w-24" alt="StopScamAds Logo" />
-      </div>
-      <h1 class="text-3xl md:text-5xl font-black mb-3 md:mb-4 text-red-600 drop-shadow-lg" data-i18n="hero.title">Stop Scam Ads. Protect Everyone.</h1>
-      <p class="text-base md:text-xl text-gray-800 max-w-2xl mx-auto px-4 font-semibold" data-i18n="hero.subtitle">
-        A global campaign exposing the silent epidemic of scam ads across major social platforms.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 mt-6 md:mt-8 px-4">
-        <a href="https://x.com/StopScamAds" target="_blank" class="px-6 py-3 rounded-full bg-black text-white font-bold hover:opacity-80 shadow-xl transform hover:scale-105 transition-all" data-i18n="hero.followBtn">Follow @StopScamAds</a>
-        <a href="#why" class="px-6 py-3 rounded-full bg-yellow-500 text-black font-bold hover:bg-yellow-400 shadow-xl transform hover:scale-105 transition-all border-2 border-black" data-i18n="hero.learnBtn">Learn More</a>
-      </div>
-      <div class="mt-8 md:mt-10 px-4">
-        <img src="https://berry.b-cdn.net/images/coin.png" class="mx-auto max-w-full md:max-w-3xl rounded-lg shadow-2xl border-4 border-yellow-400" alt="Header Banner" />
+  <section class="bg-gradient-to-b from-white to-gray-100">
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+      <img src="https://berry.b-cdn.net/images/coin.png" class="mx-auto mb-10 rounded-xl shadow-2xl" />
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Stop Scam Ads</h1>
+      <p class="text-xl max-w-3xl mx-auto">Expose scam ads on major platforms. Pressure change through public action.</p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="https://x.com/StopScamAds" target="_blank" class="bg-red-600 text-white px-6 py-3 rounded-xl font-semibold shadow">Follow on X</a>
+        <a href="#cases" class="border px-6 py-3 rounded-xl">See Examples</a>
       </div>
     </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="relative py-20 bg-gradient-to-br from-yellow-50 via-white to-red-50 overflow-hidden">
+    <!-- Warning background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, #ef4444 0px, #ef4444 2px, transparent 2px, transparent 20px), repeating-linear-gradient(-45deg, #fbbf24 0px, #fbbf24 2px, transparent 2px, transparent 20px);"></div>
+    </div>
+    
+    <!-- Top warning stripe -->
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600"></div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="bg-white border-l-4 border-red-600 rounded-r-xl shadow-xl p-6 md:p-8">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+            ⚠
+          </div>
+          <div class="flex-1">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-700" data-i18n="intro.title">這不是零星事件，而是系統性問題</h2>
+            <p class="text-base md:text-lg text-gray-700 leading-relaxed" data-i18n="intro.content">
+              詐騙廣告正在 Meta、YouTube 等大型社交平台上大量出現。
+              它們不是偶發失誤，而是在「以廣告收入為核心的系統設計」中被放大。
+              詐騙者利用平台的規模、信任與自動化投放，將風險轉嫁給普通用戶。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom warning stripe -->
+    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600"></div>
   </section>
 
   <!-- Stripe Divider -->
@@ -355,8 +373,55 @@
   <!-- Stripe Divider -->
   <div class="stripe-divider"></div>
 
+  <!-- $8 SECTION -->
+  <section class="relative py-24 bg-gradient-to-b from-red-50 via-orange-50 to-yellow-50 overflow-hidden">
+    <!-- Danger background pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 40px, rgba(220, 38, 38, 0.1) 40px, rgba(220, 38, 38, 0.1) 80px);"></div>
+    </div>
+    
+    <!-- Warning stripes on sides -->
+    <div class="absolute left-0 top-0 bottom-0 w-4 md:w-8 warning-stripes opacity-60"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-4 md:w-8 warning-stripes opacity-60"></div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div class="inline-block mb-6">
+        <div class="inline-block px-4 py-2 bg-red-600 text-white font-black text-xs md:text-sm uppercase tracking-wider transform -rotate-2 shadow-xl border-2 border-black">
+          💰 Cost of Scam
+        </div>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-black mb-6 text-red-700 drop-shadow-lg" data-i18n="dollar8.title">只要 8 美元，就能影響 1,000 人</h2>
+      <p class="text-base md:text-lg max-w-3xl mx-auto mb-10 text-gray-800 font-semibold" data-i18n="dollar8.content" data-i18n-html="true">
+        在 YouTube 上，詐騙者平均只需約 <strong>$8</strong> 的廣告費，
+        就能將詐騙內容展示給 <strong>1,000 名用戶</strong>。
+        即使只有 <strong>0.1%</strong> 受害，後果也可能是一個家庭的終身財務毀滅。
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-red-600 to-red-800 rounded-xl transform rotate-2 group-hover:rotate-0 transition-transform"></div>
+          <div class="relative bg-white p-4 md:p-6 rounded-xl shadow-2xl border-4 border-red-600 font-bold text-sm md:text-base transform -rotate-1 group-hover:rotate-0 transition-transform" data-i18n="dollar8.step1">$8 廣告費</div>
+        </div>
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-orange-800 rounded-xl transform -rotate-2 group-hover:rotate-0 transition-transform"></div>
+          <div class="relative bg-white p-4 md:p-6 rounded-xl shadow-2xl border-4 border-orange-600 font-bold text-sm md:text-base transform rotate-1 group-hover:rotate-0 transition-transform" data-i18n="dollar8.step2">1,000 次展示</div>
+        </div>
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-xl transform rotate-2 group-hover:rotate-0 transition-transform"></div>
+          <div class="relative bg-white p-4 md:p-6 rounded-xl shadow-2xl border-4 border-yellow-600 font-bold text-sm md:text-base transform -rotate-1 group-hover:rotate-0 transition-transform" data-i18n="dollar8.step3">0.1% 受害率</div>
+        </div>
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black rounded-xl transform -rotate-2 group-hover:rotate-0 transition-transform"></div>
+          <div class="relative bg-white p-4 md:p-6 rounded-xl shadow-2xl border-4 border-gray-800 font-bold text-sm md:text-base transform rotate-1 group-hover:rotate-0 transition-transform" data-i18n="dollar8.step4">家庭被毀</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stripe Divider -->
+  <div class="stripe-divider"></div>
+
   <!-- Why This Matters -->
-  <section id="why" class="relative py-12 md:py-16 px-4 md:px-6 bg-white">
+  <section id="why" class="relative py-12 md:py-16 px-4 md:px-6 bg-white"></section>
     <div class="max-w-4xl mx-auto">
       <div class="relative bg-gradient-to-br from-red-100 to-yellow-100 border-l-8 border-red-600 rounded-r-2xl shadow-2xl p-6 md:p-10">
         <!-- Warning icon -->
@@ -557,10 +622,14 @@
     const translations = {
       en: {
         hero: {
-          title: 'Stop Scam Ads. Protect Everyone.',
-          subtitle: 'A global campaign exposing the silent epidemic of scam ads across major social platforms.',
-          followBtn: 'Follow @StopScamAds',
-          learnBtn: 'Learn More'
+          title: 'Stop Scam Ads',
+          subtitle: 'Expose scam ads on major platforms. Pressure change through public action.',
+          followBtn: 'Follow on X',
+          learnBtn: 'See Examples'
+        },
+        intro: {
+          title: 'This Is Not Isolated Incidents, But a Systemic Problem',
+          content: 'Scam ads are proliferating across major social platforms like Meta and YouTube. They are not occasional mistakes, but amplified by "ad revenue-driven system design." Scammers exploit platform scale, trust, and automated distribution, shifting risk to ordinary users.'
         },
         stats: {
           title: 'Recent Global Scam Loss Statistics',
@@ -590,6 +659,14 @@
         cases: {
           title: 'Real Scam Ad Examples'
         },
+        dollar8: {
+          title: 'Just $8 Can Reach 1,000 People',
+          content: 'On YouTube, scammers need only about <strong>$8</strong> in ad spend to show scam content to <strong>1,000 users</strong>. Even with just <strong>0.1%</strong> victimization, the consequence could be a family\'s lifetime financial ruin.',
+          step1: '$8 Ad Spend',
+          step2: '1,000 Impressions',
+          step3: '0.1% Victim Rate',
+          step4: 'Family Destroyed'
+        },
         impact: {
           title: 'Social Impact',
           economic: { title: 'Economic Loss', content: 'Billions stolen from victims worldwide.' },
@@ -610,10 +687,14 @@
       },
       zh: {
         hero: {
-          title: '停止詐騙廣告，保護所有人',
-          subtitle: '一場揭露主要社交平台上詐騙廣告流行病的全球運動。',
-          followBtn: '關注 @StopScamAds',
-          learnBtn: '了解更多'
+          title: '停止詐騙廣告',
+          subtitle: '揭露主要平台上的詐騙廣告。透過公眾行動施壓改變。',
+          followBtn: '在 X 上關注',
+          learnBtn: '查看案例'
+        },
+        intro: {
+          title: '這不是零星事件，而是系統性問題',
+          content: '詐騙廣告正在 Meta、YouTube 等大型社交平台上大量出現。它們不是偶發失誤，而是在「以廣告收入為核心的系統設計」中被放大。詐騙者利用平台的規模、信任與自動化投放，將風險轉嫁給普通用戶。'
         },
         stats: {
           title: '近期全球詐騙損失統計',
@@ -642,6 +723,14 @@
         },
         cases: {
           title: '真實詐騙廣告案例'
+        },
+        dollar8: {
+          title: '只要 8 美元，就能影響 1,000 人',
+          content: '在 YouTube 上，詐騙者平均只需約 <strong>$8</strong> 的廣告費，就能將詐騙內容展示給 <strong>1,000 名用戶</strong>。即使只有 <strong>0.1%</strong> 受害，後果也可能是一個家庭的終身財務毀滅。',
+          step1: '$8 廣告費',
+          step2: '1,000 次展示',
+          step3: '0.1% 受害率',
+          step4: '家庭被毀'
         },
         impact: {
           title: '社會影響',
@@ -683,7 +772,13 @@
         }
         
         if (value) {
-          el.textContent = value;
+          // Check if element should use innerHTML (for HTML content like <strong>)
+          const useHtml = el.getAttribute('data-i18n-html') === 'true';
+          if (useHtml) {
+            el.innerHTML = value;
+          } else {
+            el.textContent = value;
+          }
         }
       });
 
