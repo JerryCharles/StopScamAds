@@ -421,19 +421,28 @@
   <div class="stripe-divider"></div>
 
   <!-- Why This Matters -->
-  <section id="why" class="relative py-12 md:py-16 px-4 md:px-6 bg-white"></section>
-    <div class="max-w-4xl mx-auto">
-      <div class="relative bg-gradient-to-br from-red-100 to-yellow-100 border-l-8 border-red-600 rounded-r-2xl shadow-2xl p-6 md:p-10">
-        <!-- Warning icon -->
-        <div class="absolute -left-6 top-8 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold shadow-xl">
-          ⚠
-        </div>
-        
-        <h2 class="text-2xl md:text-4xl font-black mb-4 md:mb-6 text-red-700" data-i18n="why.title">Why This Matters</h2>
-        <p class="text-base md:text-xl leading-relaxed text-gray-900 font-medium" data-i18n="why.content">
-          Scam ads are spreading across Facebook, Instagram, YouTube, TikTok, and X. They're disguised as celebrity endorsements,
-          investment schemes, government notices, and fake giveaways. Millions of users are exposed daily without realizing the danger.
-        </p>
+  <section id="why" class="relative py-16 md:py-20 px-4 md:px-6 bg-black text-white overflow-hidden">
+    <!-- Alert pattern background -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(0deg, #ef4444 0px, #ef4444 1px, transparent 1px, transparent 30px), repeating-linear-gradient(90deg, #ef4444 0px, #ef4444 1px, transparent 1px, transparent 30px);"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <div class="inline-block mb-6 px-6 py-3 bg-red-600 text-white font-black text-sm md:text-base uppercase tracking-wider transform -rotate-1 shadow-2xl border-4 border-yellow-400">
+        ⚠️ SCAM ADS ARE EVERYWHERE
+      </div>
+      
+      <div class="mb-8 flex flex-wrap justify-center gap-3 md:gap-4 text-base md:text-xl font-bold">
+        <span class="px-4 py-2 bg-gray-800 rounded-lg border-2 border-red-600">Facebook</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg border-2 border-red-600">Instagram</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg border-2 border-red-600">YouTube</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg border-2 border-red-600">TikTok</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg border-2 border-red-600">X</span>
+      </div>
+      
+      <div class="space-y-4 text-lg md:text-2xl font-bold max-w-3xl mx-auto">
+        <p class="text-yellow-400" data-i18n="why.line1">Fake celebrity endorsements. Deepfake videos. Phishing schemes.</p>
+        <p class="text-red-400" data-i18n="why.line2">Millions exposed daily. Platforms profit. Users pay the price.</p>
       </div>
     </div>
   </section>
@@ -457,7 +466,7 @@
           <div class="relative bg-white p-6 md:p-8 rounded-2xl shadow-2xl border-4 border-red-600 transform -rotate-1 group-hover:rotate-0 transition-transform">
             <div class="text-5xl mb-4 text-center">🎭</div>
             <h3 class="font-black text-xl md:text-2xl mb-3 text-red-700 text-center" data-i18n="how.step1.title">1. Scammers</h3>
-            <p class="text-sm md:text-base text-gray-800 font-medium" data-i18n="how.step1.content">Produce fake ads using automation, stolen identities, deepfakes, and mass targeting.</p>
+            <p class="text-sm md:text-base text-gray-800 font-medium" data-i18n="how.step1.content">Create fake ads using stolen identities, deepfakes, and automation.</p>
           </div>
         </div>
 
@@ -467,7 +476,7 @@
           <div class="relative bg-white p-6 md:p-8 rounded-2xl shadow-2xl border-4 border-yellow-600 transform rotate-1 group-hover:rotate-0 transition-transform">
             <div class="text-5xl mb-4 text-center">💰</div>
             <h3 class="font-black text-xl md:text-2xl mb-3 text-yellow-700 text-center" data-i18n="how.step2.title">2. Platforms</h3>
-            <p class="text-sm md:text-base text-gray-800 font-medium" data-i18n="how.step2.content">Ad systems distribute these ads widely — and earn revenue from every impression.</p>
+            <p class="text-sm md:text-base text-gray-800 font-medium" data-i18n="how.step2.content">Distribute these ads to millions—and profit from every view.</p>
           </div>
         </div>
 
@@ -477,67 +486,11 @@
           <div class="relative bg-white p-6 md:p-8 rounded-2xl shadow-2xl border-4 border-gray-800 transform -rotate-1 group-hover:rotate-0 transition-transform">
             <div class="text-5xl mb-4 text-center">😰</div>
             <h3 class="font-black text-xl md:text-2xl mb-3 text-gray-800 text-center" data-i18n="how.step3.title">3. Users</h3>
-            <p class="text-sm md:text-base text-gray-800 font-medium" data-i18n="how.step3.content">People trust the platform and fall victim, losing money, data, and privacy.</p>
+            <p class="text-sm md:text-base text-gray-800 font-medium" data-i18n="how.step3.content">Trust the platform. Lose money, data, and privacy.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Stripe Divider -->
-  <div class="stripe-divider"></div>
-
-  <!-- SOCIAL IMPACT -->
-  <section class="relative py-12 md:py-16 bg-gradient-to-b from-red-50 to-white px-4 md:px-6 overflow-hidden">
-    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600"></div>
-    
-    <div class="relative z-10">
-      <h2 class="text-2xl md:text-4xl font-black text-center mb-8 md:mb-12 text-red-700" data-i18n="impact.title">Social Impact</h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-        <!-- Economic Loss -->
-        <div class="relative group">
-          <div class="absolute inset-0 bg-red-600 rounded-xl transform group-hover:scale-105 transition-transform shadow-xl"></div>
-          <div class="relative bg-white p-6 rounded-xl shadow-2xl border-t-4 border-red-600 transform group-hover:-translate-y-2 transition-transform">
-            <div class="text-4xl mb-3 text-center">💸</div>
-            <h3 class="font-black text-lg md:text-xl mb-2 text-red-700 text-center" data-i18n="impact.economic.title">Economic Loss</h3>
-            <p class="text-sm md:text-base text-gray-700 font-medium text-center" data-i18n="impact.economic.content">Billions stolen from victims worldwide.</p>
-          </div>
-        </div>
-
-        <!-- Privacy Theft -->
-        <div class="relative group">
-          <div class="absolute inset-0 bg-orange-600 rounded-xl transform group-hover:scale-105 transition-transform shadow-xl"></div>
-          <div class="relative bg-white p-6 rounded-xl shadow-2xl border-t-4 border-orange-600 transform group-hover:-translate-y-2 transition-transform">
-            <div class="text-4xl mb-3 text-center">🔓</div>
-            <h3 class="font-black text-lg md:text-xl mb-2 text-orange-700 text-center" data-i18n="impact.privacy.title">Privacy Theft</h3>
-            <p class="text-sm md:text-base text-gray-700 font-medium text-center" data-i18n="impact.privacy.content">Personal data, banking info, IDs stolen.</p>
-          </div>
-        </div>
-
-        <!-- Psychological Damage -->
-        <div class="relative group">
-          <div class="absolute inset-0 bg-yellow-600 rounded-xl transform group-hover:scale-105 transition-transform shadow-xl"></div>
-          <div class="relative bg-white p-6 rounded-xl shadow-2xl border-t-4 border-yellow-600 transform group-hover:-translate-y-2 transition-transform">
-            <div class="text-4xl mb-3 text-center">😢</div>
-            <h3 class="font-black text-lg md:text-xl mb-2 text-yellow-700 text-center" data-i18n="impact.psychological.title">Psychological Damage</h3>
-            <p class="text-sm md:text-base text-gray-700 font-medium text-center" data-i18n="impact.psychological.content">Stress, shame, trauma for victims.</p>
-          </div>
-        </div>
-
-        <!-- Trust Breakdown -->
-        <div class="relative group">
-          <div class="absolute inset-0 bg-gray-700 rounded-xl transform group-hover:scale-105 transition-transform shadow-xl"></div>
-          <div class="relative bg-white p-6 rounded-xl shadow-2xl border-t-4 border-gray-700 transform group-hover:-translate-y-2 transition-transform">
-            <div class="text-4xl mb-3 text-center">💔</div>
-            <h3 class="font-black text-lg md:text-xl mb-2 text-gray-800 text-center" data-i18n="impact.trust.title">Trust Breakdown</h3>
-            <p class="text-sm md:text-base text-gray-700 font-medium text-center" data-i18n="impact.trust.content">Platforms lose credibility.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600"></div>
   </section>
 
   <!-- Stripe Divider -->
@@ -647,14 +600,14 @@
           est: 'est.'
         },
         why: {
-          title: 'Why This Matters',
-          content: "Scam ads are spreading across Facebook, Instagram, YouTube, TikTok, and X. They're disguised as celebrity endorsements, investment schemes, government notices, and fake giveaways. Millions of users are exposed daily without realizing the danger."
+          line1: 'Fake celebrity endorsements. Deepfake videos. Phishing schemes.',
+          line2: 'Millions exposed daily. Platforms profit. Users pay the price.'
         },
         how: {
           title: 'How Scam Ads Work',
-          step1: { title: '1. Scammers', content: 'Produce fake ads using automation, stolen identities, deepfakes, and mass targeting.' },
-          step2: { title: '2. Platforms', content: 'Ad systems distribute these ads widely — and earn revenue from every impression.' },
-          step3: { title: '3. Users', content: 'People trust the platform and fall victim, losing money, data, and privacy.' }
+          step1: { title: '1. Scammers', content: 'Create fake ads using stolen identities, deepfakes, and automation.' },
+          step2: { title: '2. Platforms', content: 'Distribute these ads to millions—and profit from every view.' },
+          step3: { title: '3. Users', content: 'Trust the platform. Lose money, data, and privacy.' }
         },
         cases: {
           title: 'Real Scam Ad Examples'
@@ -666,13 +619,6 @@
           step2: '1,000 Impressions',
           step3: '0.1% Victim Rate',
           step4: 'Family Destroyed'
-        },
-        impact: {
-          title: 'Social Impact',
-          economic: { title: 'Economic Loss', content: 'Billions stolen from victims worldwide.' },
-          privacy: { title: 'Privacy Theft', content: 'Personal data, banking info, IDs stolen.' },
-          psychological: { title: 'Psychological Damage', content: 'Stress, shame, trauma for victims.' },
-          trust: { title: 'Trust Breakdown', content: 'Platforms lose credibility.' }
         },
         join: {
           title: 'Join the Movement',
@@ -712,14 +658,14 @@
           est: '預估'
         },
         why: {
-          title: '為什麼這很重要',
-          content: '詐騙廣告正在 Facebook、Instagram、YouTube、TikTok 和 X 上蔓延。它們偽裝成名人代言、投資計劃、政府通知和虛假贈品。數百萬用戶每天都在不知不覺中暴露於危險之中。'
+          line1: '假名人代言。深度偽造影片。釣魚詐騙。',
+          line2: '每天數百萬人暴露風險。平台獲利。用戶付出代價。'
         },
         how: {
           title: '詐騙廣告如何運作',
-          step1: { title: '1. 詐騙者', content: '使用自動化、盜用身份、深度偽造和大規模定向投放製作虛假廣告。' },
-          step2: { title: '2. 平台', content: '廣告系統廣泛分發這些廣告，並從每次曝光中獲得收入。' },
-          step3: { title: '3. 用戶', content: '人們信任平台並成為受害者，損失金錢、數據和隱私。' }
+          step1: { title: '1. 詐騙者', content: '使用盜用身份、深度偽造和自動化製作假廣告。' },
+          step2: { title: '2. 平台', content: '將這些廣告分發給數百萬人——並從每次觀看中獲利。' },
+          step3: { title: '3. 用戶', content: '信任平台。損失金錢、數據和隱私。' }
         },
         cases: {
           title: '真實詐騙廣告案例'
@@ -731,13 +677,6 @@
           step2: '1,000 次展示',
           step3: '0.1% 受害率',
           step4: '家庭被毀'
-        },
-        impact: {
-          title: '社會影響',
-          economic: { title: '經濟損失', content: '全球受害者損失數十億美元。' },
-          privacy: { title: '隱私盜竊', content: '個人數據、銀行信息、身份證被盜。' },
-          psychological: { title: '心理傷害', content: '受害者遭受壓力、羞恥和創傷。' },
-          trust: { title: '信任崩潰', content: '平台失去公信力。' }
         },
         join: {
           title: '加入運動',
