@@ -531,7 +531,7 @@
   <div class="stripe-divider"></div>
 
   <!-- SUBMIT -->
-  <section id="submit" class="relative py-16 md:py-20 px-4 md:px-6 text-center bg-gradient-to-br from-yellow-50 via-white to-red-50 overflow-hidden"></section>
+  <section id="submit" class="relative py-16 md:py-20 px-4 md:px-6 text-center bg-gradient-to-br from-yellow-50 via-white to-red-50 overflow-hidden">
     <!-- Alert border -->
     <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-red-600 via-yellow-500 via-red-600 via-yellow-500 to-red-600"></div>
     
@@ -573,9 +573,13 @@
           </div>
           
           <div>
-            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.videoLink">Video Link (Google Drive, Dropbox, etc.)</label>
+            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.videoLink">Screen Recording Link (Required)</label>
             <input type="url" name="videoLink" placeholder="https://drive.google.com/file/d/..." required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
-            <p class="text-xs text-gray-500 mt-1" data-i18n="form.videoHint">Supported: Google Drive, Dropbox, OneDrive, iCloud Drive</p>
+            <div class="mt-2 p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded">
+              <p class="text-sm font-semibold text-gray-800 mb-1" data-i18n="form.recordingTip">📹 Please record the scam ad on your screen</p>
+              <p class="text-xs text-gray-600" data-i18n="form.videoHint">Upload to: Google Drive, Dropbox, OneDrive, iCloud Drive, WeTransfer</p>
+              <p class="text-xs text-gray-600 mt-1" data-i18n="form.shareHint">Make sure the link is set to "Anyone with the link can view"</p>
+            </div>
           </div>
           
           <!-- Turnstile Widget -->
@@ -583,7 +587,7 @@
             <div class="cf-turnstile" data-sitekey="0x4AAAAAACG9GsZpgtdqRuRv"></div>
           </div>
           
-          <button type="submit" class="w-full px-8 py-4 bg-red-600 text-white rounded-lg font-black text-lg hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black" data-i18n="submit.submitBtn">Submit Report</button>
+          <button type="submit" class="w-full px-8 py-4 bg-red-600 text-white rounded-lg font-black text-lg hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black disabled:opacity-50 disabled:cursor-not-allowed" data-i18n="submit.submitBtn">Submit Report</button>
         </form>
         
         <div id="form-message" class="mt-4 hidden"></div>
@@ -691,8 +695,10 @@
           platform: 'Platform Type',
           selectPlatform: 'Select Platform',
           other: 'Other',
-          videoLink: 'Video Link (Google Drive, Dropbox, etc.)',
-          videoHint: 'Supported: Google Drive, Dropbox, OneDrive, iCloud Drive',
+          videoLink: 'Screen Recording Link (Required)',
+          recordingTip: '📹 Please record the scam ad on your screen',
+          videoHint: 'Upload to: Google Drive, Dropbox, OneDrive, iCloud Drive, WeTransfer',
+          shareHint: 'Make sure the link is set to "Anyone with the link can view"',
           success: 'Thank you! Your report has been submitted.',
           error: 'Error: ',
           verificationRequired: 'Please complete the verification',
@@ -763,8 +769,10 @@
           platform: '平台類型',
           selectPlatform: '選擇平台',
           other: '其他',
-          videoLink: '影片連結（Google Drive、Dropbox 等）',
-          videoHint: '支援：Google Drive、Dropbox、OneDrive、iCloud Drive',
+          videoLink: '螢幕錄影連結（必填）',
+          recordingTip: '📹 請錄製詐騙廣告的螢幕畫面',
+          videoHint: '上傳至：Google Drive、Dropbox、OneDrive、iCloud Drive、WeTransfer',
+          shareHint: '請確保連結設定為「知道連結的任何人都可以查看」',
           success: '感謝您！您的報告已提交。',
           error: '錯誤：',
           verificationRequired: '請完成驗證',
@@ -1152,11 +1160,21 @@
             
             // Scroll to message
             messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Auto-hide success message after 5 seconds
+            setTimeout(() => {
+              messageDiv.classList.add('hidden');
+            }, 5000);
           } else {
             // Error message
             messageDiv.className = 'mt-4 p-4 bg-red-100 border-2 border-red-600 rounded-lg text-red-700 font-semibold';
             messageDiv.textContent = translations[currentLang].form.error + (result.error?.message || 'Unknown error');
             messageDiv.classList.remove('hidden');
+            
+            // Auto-hide error message after 8 seconds
+            setTimeout(() => {
+              messageDiv.classList.add('hidden');
+            }, 8000);
           }
         } catch (error) {
           // Network error
@@ -1164,6 +1182,11 @@
           messageDiv.textContent = translations[currentLang].form.submitError;
           messageDiv.classList.remove('hidden');
           console.error('Submission error:', error);
+          
+          // Auto-hide error message after 8 seconds
+          setTimeout(() => {
+            messageDiv.classList.add('hidden');
+          }, 8000);
         } finally {
           // Re-enable submit button
           submitBtn.disabled = false;
