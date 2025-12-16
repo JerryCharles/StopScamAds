@@ -65,6 +65,9 @@
     gtag('config', 'G-ERF3V1L6GE');
   </script>
   
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
   {
@@ -528,7 +531,7 @@
   <div class="stripe-divider"></div>
 
   <!-- SUBMIT -->
-  <section class="relative py-16 md:py-20 px-4 md:px-6 text-center bg-gradient-to-br from-yellow-50 via-white to-red-50 overflow-hidden">
+  <section id="submit" class="relative py-16 md:py-20 px-4 md:px-6 text-center bg-gradient-to-br from-yellow-50 via-white to-red-50 overflow-hidden"></section>
     <!-- Alert border -->
     <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-red-600 via-yellow-500 via-red-600 via-yellow-500 to-red-600"></div>
     
@@ -537,7 +540,53 @@
         <div class="text-5xl md:text-6xl mb-4">📢</div>
         <h2 class="text-2xl md:text-4xl font-black mb-3 md:mb-4 text-red-700" data-i18n="submit.title">Submit Scam Ads</h2>
         <p class="text-base md:text-xl text-gray-800 mb-6 md:mb-8 font-semibold" data-i18n="submit.content">Help us expose more scam networks and protect more people.</p>
-        <a href="/submit" class="inline-block px-8 md:px-12 py-4 md:py-5 bg-red-600 text-white rounded-full font-black text-lg md:text-xl hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black" data-i18n="submit.submitBtn">Submit Now</a>
+        
+        <!-- Scam Report Form -->
+        <form id="scam-report-form" class="text-left space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.firstName">First Name</label>
+              <input type="text" name="firstName" placeholder="John" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.lastName">Last Name</label>
+              <input type="text" name="lastName" placeholder="Doe" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.email">Email</label>
+            <input type="email" name="email" placeholder="john@example.com" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.platform">Platform Type</label>
+            <select name="platformType" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors bg-white">
+              <option value="" data-i18n="form.selectPlatform">Select Platform</option>
+              <option value="youtube">YouTube</option>
+              <option value="tiktok">TikTok</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="x">X (Twitter)</option>
+              <option value="other" data-i18n="form.other">Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.videoLink">Video Link (Google Drive, Dropbox, etc.)</label>
+            <input type="url" name="videoLink" placeholder="https://drive.google.com/file/d/..." required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
+            <p class="text-xs text-gray-500 mt-1" data-i18n="form.videoHint">Supported: Google Drive, Dropbox, OneDrive, iCloud Drive</p>
+          </div>
+          
+          <!-- Turnstile Widget -->
+          <div class="flex justify-center py-4">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACG9GsZpgtdqRuRv"></div>
+          </div>
+          
+          <button type="submit" class="w-full px-8 py-4 bg-red-600 text-white rounded-lg font-black text-lg hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black" data-i18n="submit.submitBtn">Submit Report</button>
+        </form>
+        
+        <div id="form-message" class="mt-4 hidden"></div>
       </div>
     </div>
     
@@ -633,7 +682,21 @@
         submit: {
           title: 'Submit Scam Ads',
           content: 'Help us expose more scam networks and protect more people.',
-          submitBtn: 'Submit Now'
+          submitBtn: 'Submit Report'
+        },
+        form: {
+          firstName: 'First Name',
+          lastName: 'Last Name',
+          email: 'Email',
+          platform: 'Platform Type',
+          selectPlatform: 'Select Platform',
+          other: 'Other',
+          videoLink: 'Video Link (Google Drive, Dropbox, etc.)',
+          videoHint: 'Supported: Google Drive, Dropbox, OneDrive, iCloud Drive',
+          success: 'Thank you! Your report has been submitted.',
+          error: 'Error: ',
+          verificationRequired: 'Please complete the verification',
+          submitError: 'Failed to submit. Please try again.'
         }
       },
       zh: {
@@ -691,7 +754,21 @@
         submit: {
           title: '提交詐騙廣告',
           content: '幫助我們揭露更多詐騙網絡，保護更多人。',
-          submitBtn: '立即提交'
+          submitBtn: '提交報告'
+        },
+        form: {
+          firstName: '名字',
+          lastName: '姓氏',
+          email: '電子郵件',
+          platform: '平台類型',
+          selectPlatform: '選擇平台',
+          other: '其他',
+          videoLink: '影片連結（Google Drive、Dropbox 等）',
+          videoHint: '支援：Google Drive、Dropbox、OneDrive、iCloud Drive',
+          success: '感謝您！您的報告已提交。',
+          error: '錯誤：',
+          verificationRequired: '請完成驗證',
+          submitError: '提交失敗。請重試。'
         }
       }
     };
@@ -1010,6 +1087,86 @@
         }
       }, 250);
     });
+
+    // ========== FORM SUBMISSION HANDLER ==========
+    const API_URL = 'https://scam-ads-collector.826364339.workers.dev/api/submit';
+    
+    const formElement = document.getElementById('scam-report-form');
+    if (formElement) {
+      formElement.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const messageDiv = document.getElementById('form-message');
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        
+        // Get form data
+        const formData = new FormData(e.target);
+        
+        // Get Turnstile token
+        const turnstileToken = turnstile.getResponse();
+        if (!turnstileToken) {
+          messageDiv.className = 'mt-4 p-4 bg-red-100 border-2 border-red-600 rounded-lg text-red-700 font-semibold';
+          messageDiv.textContent = translations[currentLang].form.verificationRequired;
+          messageDiv.classList.remove('hidden');
+          return;
+        }
+        
+        // Disable submit button
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+        
+        // Prepare submission data
+        const data = {
+          firstName: formData.get('firstName'),
+          lastName: formData.get('lastName'),
+          email: formData.get('email'),
+          platformType: formData.get('platformType'),
+          videoLink: formData.get('videoLink'),
+          turnstileToken: turnstileToken
+        };
+        
+        try {
+          const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Success message
+            messageDiv.className = 'mt-4 p-4 bg-green-100 border-2 border-green-600 rounded-lg text-green-700 font-semibold';
+            messageDiv.textContent = translations[currentLang].form.success;
+            messageDiv.classList.remove('hidden');
+            
+            // Reset form
+            e.target.reset();
+            turnstile.reset();
+            
+            // Scroll to message
+            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            // Error message
+            messageDiv.className = 'mt-4 p-4 bg-red-100 border-2 border-red-600 rounded-lg text-red-700 font-semibold';
+            messageDiv.textContent = translations[currentLang].form.error + (result.error?.message || 'Unknown error');
+            messageDiv.classList.remove('hidden');
+          }
+        } catch (error) {
+          // Network error
+          messageDiv.className = 'mt-4 p-4 bg-red-100 border-2 border-red-600 rounded-lg text-red-700 font-semibold';
+          messageDiv.textContent = translations[currentLang].form.submitError;
+          messageDiv.classList.remove('hidden');
+          console.error('Submission error:', error);
+        } finally {
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = translations[currentLang].submit.submitBtn;
+        }
+      });
+    }
   </script>
 </body>
 </html>
