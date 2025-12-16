@@ -1104,6 +1104,8 @@
         
         // Get Turnstile token
         const turnstileToken = turnstile.getResponse();
+        console.log('Turnstile token:', turnstileToken);
+        
         if (!turnstileToken) {
           messageDiv.className = 'mt-4 p-4 bg-red-100 border-2 border-red-600 rounded-lg text-red-700 font-semibold';
           messageDiv.textContent = translations[currentLang].form.verificationRequired;
@@ -1124,6 +1126,8 @@
           videoLink: formData.get('videoLink'),
           turnstileToken: turnstileToken
         };
+        
+        console.log('Sending data:', data);
         
         try {
           const response = await fetch(API_URL, {
