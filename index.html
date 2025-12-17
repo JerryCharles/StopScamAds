@@ -531,37 +531,40 @@
   <div class="stripe-divider"></div>
 
   <!-- SUBMIT -->
-  <section id="submit" class="relative py-16 md:py-20 px-4 md:px-6 text-center bg-gradient-to-br from-yellow-50 via-white to-red-50 overflow-hidden">
+  <section id="submit" class="relative py-12 md:py-16 px-4 md:px-6 text-center bg-gradient-to-br from-yellow-50 via-white to-red-50 overflow-hidden">
     <!-- Alert border -->
     <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-red-600 via-yellow-500 via-red-600 via-yellow-500 to-red-600"></div>
     
     <div class="relative z-10 max-w-3xl mx-auto">
-      <div class="bg-white border-4 border-red-600 rounded-2xl shadow-2xl p-8 md:p-12 alert-glow">
-        <div class="text-5xl md:text-6xl mb-4">📢</div>
-        <h2 class="text-2xl md:text-4xl font-black mb-3 md:mb-4 text-red-700" data-i18n="submit.title">Submit Scam Ads</h2>
-        <p class="text-base md:text-xl text-gray-800 mb-6 md:mb-8 font-semibold" data-i18n="submit.content">Help us expose more scam networks and protect more people.</p>
+      <div class="bg-white border-4 border-red-600 rounded-2xl shadow-2xl p-6 md:p-8 alert-glow">
+        <!-- Title with emoji inline -->
+        <div class="flex items-center justify-center gap-3 mb-3 md:mb-4">
+          <span class="text-4xl md:text-5xl">📢</span>
+          <h2 class="text-2xl md:text-4xl font-black text-red-700" data-i18n="submit.title">Submit Scam Ads</h2>
+        </div>
+        <p class="text-sm md:text-lg text-gray-800 mb-4 md:mb-6 font-semibold" data-i18n="submit.content">Help us expose more scam networks and protect more people.</p>
         
         <!-- Scam Report Form -->
-        <form id="scam-report-form" class="text-left space-y-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form id="scam-report-form" class="text-left space-y-3">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div>
-              <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.firstName">First Name</label>
-              <input type="text" name="firstName" placeholder="John" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
+              <label class="block text-xs md:text-sm font-bold text-gray-700 mb-1" data-i18n="form.firstName">First Name</label>
+              <input type="text" name="firstName" placeholder="John" required class="w-full px-3 py-2 md:px-4 md:py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors text-sm md:text-base">
             </div>
             <div>
-              <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.lastName">Last Name</label>
-              <input type="text" name="lastName" placeholder="Doe" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
+              <label class="block text-xs md:text-sm font-bold text-gray-700 mb-1" data-i18n="form.lastName">Last Name</label>
+              <input type="text" name="lastName" placeholder="Doe" required class="w-full px-3 py-2 md:px-4 md:py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors text-sm md:text-base">
             </div>
           </div>
           
           <div>
-            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.email">Email</label>
-            <input type="email" name="email" placeholder="john@example.com" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
+            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-1" data-i18n="form.email">Email</label>
+            <input type="email" name="email" placeholder="john@example.com" required class="w-full px-3 py-2 md:px-4 md:py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors text-sm md:text-base">
           </div>
           
           <div>
-            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.platform">Platform Type</label>
-            <select name="platformType" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors bg-white">
+            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-1" data-i18n="form.platform">Platform Type</label>
+            <select name="platformType" required class="w-full px-3 py-2 md:px-4 md:py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors bg-white text-sm md:text-base">
               <option value="" data-i18n="form.selectPlatform">Select Platform</option>
               <option value="youtube">YouTube</option>
               <option value="tiktok">TikTok</option>
@@ -573,32 +576,32 @@
           </div>
           
           <div>
-            <label class="block text-sm font-bold text-gray-700 mb-2" data-i18n="form.videoLink">Screen Recording Link (Required)</label>
-            <input type="url" name="videoLink" placeholder="https://drive.google.com/file/d/..." required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors">
-            <div class="mt-2 p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded">
-              <p class="text-sm font-semibold text-gray-800 mb-1" data-i18n="form.recordingTip">📹 Please record the scam ad on your screen</p>
+            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-1" data-i18n="form.videoLink">Screen Recording Link (Required)</label>
+            <input type="url" name="videoLink" placeholder="https://drive.google.com/file/d/..." required class="w-full px-3 py-2 md:px-4 md:py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition-colors text-sm md:text-base">
+            <div class="mt-2 p-2 md:p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded">
+              <p class="text-xs md:text-sm font-semibold text-gray-800 mb-1" data-i18n="form.recordingTip">📹 Please record the scam ad on your screen</p>
               <p class="text-xs text-gray-600" data-i18n="form.videoHint">Upload to: Google Drive, Dropbox, OneDrive, iCloud Drive, WeTransfer</p>
               <p class="text-xs text-gray-600 mt-1" data-i18n="form.shareHint">Make sure the link is set to "Anyone with the link can view"</p>
             </div>
           </div>
           
           <!-- Turnstile Widget -->
-          <div class="flex justify-center py-4">
+          <div class="flex justify-center py-2 md:py-3">
             <div class="cf-turnstile" data-sitekey="0x4AAAAAACG9GsZpgtdqRuRv"></div>
           </div>
           
           <!-- Consent Checkbox -->
-          <div class="flex items-start gap-3 p-4 bg-gray-50 border-2 border-gray-300 rounded-lg">
-            <input type="checkbox" id="consent-checkbox" name="consent" checked class="mt-1 w-5 h-5 text-red-600 border-gray-300 rounded focus:ring-red-600 focus:ring-2 cursor-pointer">
-            <label for="consent-checkbox" class="text-sm text-gray-700 cursor-pointer select-none" data-i18n="form.consent">
+          <div class="flex items-start gap-2 md:gap-3 p-3 bg-gray-50 border-2 border-gray-300 rounded-lg">
+            <input type="checkbox" id="consent-checkbox" name="consent" checked class="mt-0.5 w-4 h-4 md:w-5 md:h-5 text-red-600 border-gray-300 rounded focus:ring-red-600 focus:ring-2 cursor-pointer flex-shrink-0">
+            <label for="consent-checkbox" class="text-xs md:text-sm text-gray-700 cursor-pointer select-none leading-tight" data-i18n="form.consent">
               I consent to my submission being used for research and public reporting (anonymized).
             </label>
           </div>
           
-          <button type="submit" id="submit-button" class="w-full px-8 py-4 bg-red-600 text-white rounded-lg font-black text-lg hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" data-i18n="submit.submitBtn">Submit Report</button>
+          <button type="submit" id="submit-button" class="w-full px-6 py-3 md:px-8 md:py-4 bg-red-600 text-white rounded-lg font-black text-base md:text-lg hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" data-i18n="submit.submitBtn">Submit Report</button>
         </form>
         
-        <div id="form-message" class="mt-4 hidden"></div>
+        <div id="form-message" class="mt-3 hidden"></div>
       </div>
     </div>
     
