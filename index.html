@@ -229,7 +229,7 @@
   <!-- HERO SECTION -->
   <section class="bg-gradient-to-b from-white to-gray-100">
     <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-      <img src="/images/coin.png" alt="Stop Scam Ads" class="mx-auto mb-10 rounded-xl shadow-2xl" />
+      <img src="https://2.3ja.com/images/coin.png" alt="Stop Scam Ads" class="mx-auto mb-10 rounded-xl shadow-2xl" />
       <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Stop Scam Ads</h1>
       <p class="text-xl max-w-3xl mx-auto">Expose scam ads on major platforms. Pressure change through public action.</p>
       <div class="mt-8 flex justify-center gap-4">
@@ -587,7 +587,15 @@
             <div class="cf-turnstile" data-sitekey="0x4AAAAAACG9GsZpgtdqRuRv"></div>
           </div>
           
-          <button type="submit" class="w-full px-8 py-4 bg-red-600 text-white rounded-lg font-black text-lg hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black disabled:opacity-50 disabled:cursor-not-allowed" data-i18n="submit.submitBtn">Submit Report</button>
+          <!-- Consent Checkbox -->
+          <div class="flex items-start gap-3 p-4 bg-gray-50 border-2 border-gray-300 rounded-lg">
+            <input type="checkbox" id="consent-checkbox" name="consent" checked class="mt-1 w-5 h-5 text-red-600 border-gray-300 rounded focus:ring-red-600 focus:ring-2 cursor-pointer">
+            <label for="consent-checkbox" class="text-sm text-gray-700 cursor-pointer select-none" data-i18n="form.consent">
+              I consent to my submission being used for research and public reporting (anonymized).
+            </label>
+          </div>
+          
+          <button type="submit" id="submit-button" class="w-full px-8 py-4 bg-red-600 text-white rounded-lg font-black text-lg hover:bg-red-700 shadow-xl transform hover:scale-105 transition-all border-2 border-black disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" data-i18n="submit.submitBtn">Submit Report</button>
         </form>
         
         <div id="form-message" class="mt-4 hidden"></div>
@@ -699,6 +707,7 @@
           recordingTip: '📹 Please record the scam ad on your screen',
           videoHint: 'Upload to: Google Drive, Dropbox, OneDrive, iCloud Drive, WeTransfer',
           shareHint: 'Make sure the link is set to "Anyone with the link can view"',
+          consent: 'I consent to my submission being used for research and public reporting (anonymized).',
           success: 'Thank you! Your report has been submitted.',
           error: 'Error: ',
           verificationRequired: 'Please complete the verification',
@@ -773,6 +782,7 @@
           recordingTip: '📹 請錄製詐騙廣告的螢幕畫面',
           videoHint: '上傳至：Google Drive、Dropbox、OneDrive、iCloud Drive、WeTransfer',
           shareHint: '請確保連結設定為「知道連結的任何人都可以查看」',
+          consent: '我同意將我的提交用於研究和公開報告（匿名化）。',
           success: '感謝您！您的報告已提交。',
           error: '錯誤：',
           verificationRequired: '請完成驗證',
@@ -888,45 +898,9 @@
           label: 'Meta',
           items: [
             { 
-              type: 'image', 
-              image: 'https://via.placeholder.com/400x300?text=Meta+Scam+1', 
-              title: 'Fake Celebrity Investment' 
-            },
-            { 
-              type: 'image', 
-              image: 'https://via.placeholder.com/400x300?text=Meta+Scam+2', 
-              title: 'Deepfake News Video' 
-            },
-            { 
               type: 'tweet', 
-              tweetUrl: 'https://twitter.com/StopScamAds/status/1234567890', 
-              title: 'Real Scam Report' 
-            },
-            { 
-              type: 'image', 
-              image: 'https://via.placeholder.com/400x300?text=Meta+Scam+4', 
-              title: 'Bank Impersonation' 
-            }
-          ]
-        },
-        {
-          id: 'youtube',
-          label: 'YouTube',
-          items: [
-            { 
-              type: 'image', 
-              image: 'https://via.placeholder.com/400x300?text=YouTube+Scam+1', 
-              title: 'Fake Crypto Guru' 
-            },
-            { 
-              type: 'tweet', 
-              tweetUrl: 'https://twitter.com/StopScamAds/status/9876543210', 
-              title: 'YouTube Scam Alert' 
-            },
-            { 
-              type: 'image', 
-              image: 'https://via.placeholder.com/400x300?text=YouTube+Scam+3', 
-              title: 'Malware Download' 
+              tweetUrl: 'https://twitter.com/StopScamAds/status/2001181936853901780', 
+              title: 'Fake Grok 6.0 Scam on Facebook Reels' 
             }
           ]
         }
@@ -944,9 +918,9 @@
         return;
       }
       
-      // Adjust card width for mobile
+      // Adjust card width for mobile - use 85% of viewport width for single item, showing 10-15% of next item
       const isMobile = window.innerWidth < 768;
-      const cardWidth = isMobile ? Math.min(280, window.innerWidth - 48) : scamTabsConfig.itemWidth;
+      const cardWidth = isMobile ? Math.floor(window.innerWidth * 0.85) : scamTabsConfig.itemWidth;
       
       // Create tab buttons with warning style
       scamTabsConfig.tabs.forEach((tab, index) => {
@@ -968,13 +942,20 @@
         tabContent.id = `tab-${tab.id}`;
         tabContent.className = `tab-content ${index !== 0 ? 'hidden' : ''}`;
         
-        // Create scrollable container
+        // Create scrollable container with snap scrolling on mobile
         const scrollContainer = document.createElement('div');
         scrollContainer.className = 'scroll-container overflow-x-auto pb-4 -mx-4 md:-mx-6 px-4 md:px-6';
+        if (isMobile) {
+          scrollContainer.style.scrollSnapType = 'x mandatory';
+          scrollContainer.style.scrollPaddingLeft = '1rem';
+        }
         
         // Create horizontal flex container
         const flexContainer = document.createElement('div');
         flexContainer.className = 'flex gap-4 md:gap-6';
+        if (isMobile) {
+          flexContainer.style.paddingRight = '15%'; // Show hint of next item
+        }
         
         // Add items to flex container
         tab.items.forEach((item, itemIndex) => {
@@ -986,6 +967,9 @@
             // Image type card with warning style
             card.className = 'bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-red-500/50 transition-all flex-shrink-0 border-4 border-red-600 transform hover:scale-105';
             card.style.width = `${cardWidth}px`;
+            if (isMobile) {
+              card.style.scrollSnapAlign = 'start';
+            }
             card.innerHTML = `
               <div class="relative">
                 <img src="${item.image}" alt="${item.title}" class="w-full h-48 md:h-64 object-cover" />
@@ -996,24 +980,21 @@
               </div>
             `;
           } else if (item.type === 'tweet') {
-            // X/Twitter embed type card with warning style
+            // X/Twitter embed type card - video embed style
             const embedId = `tweet-embed-${tab.id}-${itemIndex}`;
-            card.className = 'bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-yellow-500/50 transition-all flex-shrink-0 border-4 border-yellow-600 transform hover:scale-105';
+            card.className = 'bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-yellow-500/50 transition-all flex-shrink-0 border-4 border-yellow-600';
             card.style.width = `${cardWidth}px`;
+            if (isMobile) {
+              card.style.scrollSnapAlign = 'start';
+            }
+            
+            // Create blockquote with data-media-max-width for compact video display
+            const tweetId = item.tweetUrl.split('/status/')[1]?.split('?')[0];
             card.innerHTML = `
-              <div class="p-3 md:p-4 bg-gradient-to-br from-yellow-50 to-red-50">
-                <div class="flex items-center gap-2 mb-3">
-                  <div class="bg-yellow-600 text-white px-2 py-1 rounded text-xs font-bold">🚨 REPORT</div>
-                  <h4 class="font-bold text-sm md:text-base text-gray-800 flex-1">${item.title}</h4>
-                </div>
-                <div id="${embedId}" class="flex items-center justify-center bg-white rounded-lg p-4 min-h-[250px] md:min-h-[300px] border-2 border-gray-200">
-                  <div class="text-center text-gray-500">
-                    <svg class="w-6 md:w-8 h-6 md:h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                    <a href="${item.tweetUrl}" target="_blank" class="text-blue-600 hover:underline text-xs md:text-sm">View on X</a>
-                  </div>
-                </div>
+              <div id="${embedId}" class="bg-white rounded-lg p-2">
+                <blockquote class="twitter-tweet" data-media-max-width="560" data-conversation="none" data-theme="light" data-dnt="true">
+                  <a href="${item.tweetUrl}">Loading tweet...</a>
+                </blockquote>
               </div>
             `;
             
@@ -1023,11 +1004,12 @@
               script.src = 'https://platform.twitter.com/widgets.js';
               script.async = true;
               script.onload = () => {
-                loadTweet(item.tweetUrl, embedId);
+                window.twttr.widgets.load(document.getElementById(embedId));
               };
               document.body.appendChild(script);
             } else {
-              loadTweet(item.tweetUrl, embedId);
+              // Reload widgets for this specific container
+              window.twttr.widgets.load(document.getElementById(embedId));
             }
           }
           
@@ -1040,19 +1022,12 @@
       });
     }
 
-    // Load tweet embed
+    // Load tweet embed (kept for compatibility, but now using blockquote method)
     function loadTweet(tweetUrl, embedId) {
-      const tweetId = tweetUrl.split('/status/')[1]?.split('?')[0];
-      if (tweetId && window.twttr) {
-        const container = document.getElementById(embedId);
-        container.innerHTML = '';
-        const isMobile = window.innerWidth < 768;
-        window.twttr.widgets.createTweet(tweetId, container, {
-          theme: 'light',
-          width: isMobile ? 250 : 350,
-          conversation: 'none',
-          cards: 'visible'
-        });
+      // This function is now handled by blockquote + twttr.widgets.load()
+      // Kept for backward compatibility
+      if (window.twttr && document.getElementById(embedId)) {
+        window.twttr.widgets.load(document.getElementById(embedId));
       }
     }
 
@@ -1193,6 +1168,29 @@
           submitBtn.textContent = translations[currentLang].submit.submitBtn;
         }
       });
+    }
+
+    // ========== CONSENT CHECKBOX HANDLER ==========
+    const consentCheckbox = document.getElementById('consent-checkbox');
+    const submitButton = document.getElementById('submit-button');
+    
+    if (consentCheckbox && submitButton) {
+      // Function to update submit button state
+      function updateSubmitButtonState() {
+        if (consentCheckbox.checked) {
+          submitButton.disabled = false;
+          submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+        } else {
+          submitButton.disabled = true;
+          submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+        }
+      }
+      
+      // Listen for checkbox changes
+      consentCheckbox.addEventListener('change', updateSubmitButtonState);
+      
+      // Initial state check (should be enabled since checkbox is checked by default)
+      updateSubmitButtonState();
     }
   </script>
 </body>
