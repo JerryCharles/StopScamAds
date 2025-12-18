@@ -504,6 +504,79 @@
   <!-- Stripe Divider -->
   <div class="stripe-divider"></div>
 
+  <!-- ROADMAP -->
+  <section class="relative py-16 md:py-20 px-4 md:px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-3 text-gray-900" data-i18n="roadmap.title">Roadmap</h2>
+      <p class="text-xs md:text-sm text-gray-500 text-center mb-12 md:mb-16 italic" data-i18n="roadmap.subtitle">This is an ongoing, evidence-based effort. No donations, no political agenda.</p>
+      
+      <div class="space-y-8 md:space-y-10">
+        <!-- Phase 0 - Completed -->
+        <div class="relative pl-8 md:pl-12 border-l-4 border-green-500">
+          <div class="absolute -left-3 top-0 w-6 h-6 bg-green-600 rounded-full border-4 border-white shadow flex items-center justify-center">
+            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <h3 class="text-xl md:text-2xl font-bold text-green-700" data-i18n="roadmap.phase0.title">Phase 0 — Evidence Collection</h3>
+            <span class="text-xs md:text-sm px-2 py-1 bg-green-100 text-green-700 rounded-full font-semibold" data-i18n="roadmap.completed">Completed</span>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-base md:text-lg">
+            <li data-i18n="roadmap.phase0.item1">Collecting real scam ads across major platforms.</li>
+            <li data-i18n="roadmap.phase0.item2">Documenting patterns, formats, and impersonation tactics.</li>
+            <li data-i18n="roadmap.phase0.item3">Publishing cases publicly for transparency.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 1 - In Progress -->
+        <div class="relative pl-8 md:pl-12 border-l-4 border-blue-500">
+          <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow animate-pulse"></div>
+          <div class="flex items-center gap-2 mb-3">
+            <h3 class="text-xl md:text-2xl font-bold text-blue-700" data-i18n="roadmap.phase1.title">Phase 1 — Public Awareness & Polling</h3>
+            <span class="text-xs md:text-sm px-2 py-1 bg-blue-100 text-blue-700 rounded-full font-semibold" data-i18n="roadmap.inProgress">In Progress</span>
+          </div>
+          <ul class="space-y-2 text-gray-700 text-base md:text-lg">
+            <li data-i18n="roadmap.phase1.item1">Publishing scam ad videos and screenshots.</li>
+            <li data-i18n="roadmap.phase1.item2">Running public polls to measure real user exposure.</li>
+            <li data-i18n="roadmap.phase1.item3">Sharing results openly.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 2 - Upcoming -->
+        <div class="relative pl-8 md:pl-12 border-l-4 border-gray-300">
+          <div class="absolute -left-3 top-0 w-6 h-6 bg-gray-400 rounded-full border-4 border-white shadow"></div>
+          <div class="flex items-center gap-2 mb-3">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-700" data-i18n="roadmap.phase2.title">Phase 2 — Creator & Community Action</h3>
+            <span class="text-xs md:text-sm px-2 py-1 bg-gray-100 text-gray-600 rounded-full font-semibold" data-i18n="roadmap.upcoming">Upcoming</span>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-base md:text-lg">
+            <li data-i18n="roadmap.phase2.item1">Inviting Hong Kong creators to share findings with their communities.</li>
+            <li data-i18n="roadmap.phase2.item2">Encouraging viewers to report scam ads they encounter.</li>
+            <li data-i18n="roadmap.phase2.item3">Collecting community-submitted cases.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 3 - Future -->
+        <div class="relative pl-8 md:pl-12 border-l-4 border-gray-300">
+          <div class="absolute -left-3 top-0 w-6 h-6 bg-gray-400 rounded-full border-4 border-white shadow"></div>
+          <div class="flex items-center gap-2 mb-3">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-700" data-i18n="roadmap.phase3.title">Phase 3 — Platform Accountability</h3>
+            <span class="text-xs md:text-sm px-2 py-1 bg-gray-100 text-gray-600 rounded-full font-semibold" data-i18n="roadmap.upcoming">Upcoming</span>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-base md:text-lg">
+            <li data-i18n="roadmap.phase3.item1">Summarizing evidence and polling data.</li>
+            <li data-i18n="roadmap.phase3.item2">Publishing a public report.</li>
+            <li data-i18n="roadmap.phase3.item3">Requesting clear responses and actions from platforms.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stripe Divider -->
+  <div class="stripe-divider"></div>
+
   <!-- JOIN MOVEMENT -->
   <section class="relative py-16 md:py-24 px-4 md:px-6 danger-gradient text-white text-center overflow-hidden">
     <!-- Animated alert pattern -->
@@ -689,6 +762,37 @@
           step3: '0.1% Victim Rate',
           step4: 'Family Destroyed'
         },
+        roadmap: {
+          title: 'Roadmap',
+          subtitle: 'This is an ongoing, evidence-based effort. No donations, no political agenda.',
+          completed: 'Completed',
+          inProgress: 'In Progress',
+          upcoming: 'Upcoming',
+          phase0: {
+            title: 'Phase 0 — Evidence Collection',
+            item1: 'Collecting real scam ads across major platforms.',
+            item2: 'Documenting patterns, formats, and impersonation tactics.',
+            item3: 'Publishing cases publicly for transparency.'
+          },
+          phase1: {
+            title: 'Phase 1 — Public Awareness & Polling',
+            item1: 'Publishing scam ad videos and screenshots.',
+            item2: 'Running public polls to measure real user exposure.',
+            item3: 'Sharing results openly.'
+          },
+          phase2: {
+            title: 'Phase 2 — Creator & Community Action',
+            item1: 'Inviting Hong Kong creators to share findings with their communities.',
+            item2: 'Encouraging viewers to report scam ads they encounter.',
+            item3: 'Collecting community-submitted cases.'
+          },
+          phase3: {
+            title: 'Phase 3 — Platform Accountability',
+            item1: 'Summarizing evidence and polling data.',
+            item2: 'Publishing a public report.',
+            item3: 'Requesting clear responses and actions from platforms.'
+          }
+        },
         join: {
           title: 'Join the Movement',
           content: 'Public pressure is the only thing that can force platforms to ban scam ads. Follow, share, and help expose scam networks.',
@@ -763,6 +867,37 @@
           step2: '1,000 次展示',
           step3: '0.1% 受害率',
           step4: '家庭被毀'
+        },
+        roadmap: {
+          title: '路線圖',
+          subtitle: '這是一項持續進行、基於證據的工作。不接受捐款，無政治議程。',
+          completed: '已完成',
+          inProgress: '進行中',
+          upcoming: '即將開始',
+          phase0: {
+            title: '階段 0 — 證據收集',
+            item1: '收集各大平台上的真實詐騙廣告。',
+            item2: '記錄模式、格式和冒充策略。',
+            item3: '公開發布案例以保持透明度。'
+          },
+          phase1: {
+            title: '階段 1 — 公眾意識與民意調查',
+            item1: '發布詐騙廣告影片和截圖。',
+            item2: '進行公開民意調查以衡量真實用戶暴露情況。',
+            item3: '公開分享結果。'
+          },
+          phase2: {
+            title: '階段 2 — 創作者與社群行動',
+            item1: '邀請香港創作者與其社群分享調查結果。',
+            item2: '鼓勵觀眾舉報他們遇到的詐騙廣告。',
+            item3: '收集社群提交的案例。'
+          },
+          phase3: {
+            title: '階段 3 — 平台問責',
+            item1: '總結證據和民意調查數據。',
+            item2: '發布公開報告。',
+            item3: '要求平台提供明確回應和行動。'
+          }
         },
         join: {
           title: '加入運動',
@@ -907,6 +1042,18 @@
             }
           ]
         }
+        // Uncomment below to add YouTube tab
+        // {
+        //   id: 'youtube',
+        //   label: 'YouTube',
+        //   items: [
+        //     { 
+        //       type: 'tweet', 
+        //       tweetUrl: 'https://twitter.com/StopScamAds/status/TWEET_ID_HERE', 
+        //       title: 'YouTube Scam Example' 
+        //     }
+        //   ]
+        // }
       ]
     };
 
