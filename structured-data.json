@@ -1,0 +1,332 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3ja.com/#organization",
+      "name": "StopScamAds",
+      "url": "https://3ja.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://3ja.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Global campaign to stop scam ads on social media platforms and protect users from online fraud.",
+      "foundingDate": "2025-01-01",
+      "sameAs": [
+        "https://twitter.com/StopScamAds",
+        "https://x.com/StopScamAds"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": ["English", "Chinese"],
+        "url": "https://3ja.com/#submit"
+      },
+      "areaServed": "Worldwide",
+      "knowsAbout": [
+        "Online Fraud Prevention",
+        "Social Media Scams",
+        "Deepfake Detection",
+        "Consumer Protection",
+        "Platform Accountability",
+        "Cybersecurity"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3ja.com/#website",
+      "url": "https://3ja.com",
+      "name": "StopScamAds",
+      "description": "Global campaign exposing the silent epidemic of scam ads across major social platforms.",
+      "publisher": {
+        "@id": "https://3ja.com/#organization"
+      },
+      "inLanguage": ["en", "zh-Hant"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://3ja.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Campaign",
+      "@id": "https://3ja.com/#campaign",
+      "name": "Stop Scam Ads Global Campaign",
+      "description": "Evidence-based campaign to expose and stop scam ads on social media platforms",
+      "url": "https://3ja.com",
+      "organizer": {
+        "@id": "https://3ja.com/#organization"
+      },
+      "startDate": "2025-01-01",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://3ja.com"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Online Fraud",
+          "description": "Fraudulent advertising on social media platforms causing $119B+ annual losses"
+        },
+        {
+          "@type": "Thing",
+          "name": "Platform Accountability",
+          "description": "Demanding responsibility from social media platforms for scam ad prevention"
+        },
+        {
+          "@type": "Thing",
+          "name": "Deepfake Scams",
+          "description": "AI-generated fake celebrity endorsements used in fraudulent advertisements"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://3ja.com/#article",
+      "headline": "Stop Scam Ads - Global Campaign Against Online Fraud",
+      "description": "Exposing the $119 billion annual scam ad epidemic across social media platforms. Join the movement to protect users and demand platform accountability.",
+      "image": "https://3ja.com/images/coin.png",
+      "author": {
+        "@id": "https://3ja.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://3ja.com/#organization"
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-01-01",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://3ja.com/"
+      },
+      "articleSection": "Consumer Protection",
+      "keywords": [
+        "scam ads",
+        "online fraud",
+        "social media scams",
+        "deepfake scams",
+        "platform accountability",
+        "consumer protection",
+        "cybersecurity",
+        "Meta scams",
+        "YouTube scams",
+        "TikTok scams",
+        "investment scams",
+        "phishing"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Online Fraud",
+          "description": "Fraudulent advertising on social media platforms"
+        },
+        {
+          "@type": "Thing",
+          "name": "Platform Accountability",
+          "description": "Demanding responsibility from social media platforms for scam ad prevention"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Organization",
+          "name": "Meta",
+          "alternateName": ["Facebook", "Instagram"]
+        },
+        {
+          "@type": "Organization",
+          "name": "YouTube"
+        },
+        {
+          "@type": "Organization",
+          "name": "TikTok"
+        },
+        {
+          "@type": "Organization",
+          "name": "X",
+          "alternateName": "Twitter"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://3ja.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are scam ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scam ads are fraudulent advertisements on social media platforms that use fake celebrity endorsements, deepfake videos, and phishing schemes to deceive users. They commonly appear on Meta (Facebook/Instagram), YouTube, TikTok, and other major platforms, causing over $119 billion in annual losses globally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do scam ads cost victims?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Global scam ad losses exceed $119 billion annually. In 2024, Europe lost $108 billion, the United States $16.6 billion, Taiwan $1.61 billion, Hong Kong $1.17 billion, Singapore $814.8 million, Canada $466 million, and Malaysia $345 million. These numbers continue to rise in 2025."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do scam ads work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scam ads work in three steps: 1) Scammers create fake ads using stolen identities, deepfakes, and automation. 2) Platforms distribute these ads to millions and profit from every view. 3) Users trust the platform, lose money, data, and privacy. For just $8 in ad spend, scammers can reach 1,000 users on YouTube."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is StopScamAds doing about this?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "StopScamAds is a global campaign collecting evidence of scam ads, raising public awareness, conducting polls to measure user exposure, engaging with creators and communities, and demanding platform accountability. We publish real scam ad examples and push for AI-powered ad screening, mandatory transparency reports, and user reward mechanisms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I report scam ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can submit scam ads through our website at https://3ja.com by providing a screen recording of the scam ad, platform type, and your contact information. All submissions are used for research and public reporting to expose fraud networks and protect users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do platforms allow scam ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Platforms profit from scam ads through high CPC/CPM rates. Strict review would reduce ad revenue, and review costs are high requiring OCR, frame analysis, and deepfake detection. Scam ads are not treated as systemic risks but as acceptable costs of doing business, despite causing massive financial harm to users."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://3ja.com/#statistics",
+      "name": "Global Scam Ad Loss Statistics 2023-2025",
+      "description": "Comprehensive data on financial losses from scam ads across major regions worldwide",
+      "creator": {
+        "@id": "https://3ja.com/#organization"
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-01-01",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/html",
+          "contentUrl": "https://3ja.com/#stats"
+        }
+      ],
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "Europe (EU/EEA) 2024",
+          "value": 108.00,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Europe (EU/EEA) 2025 (est.)",
+          "value": 119.00,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "United States 2024",
+          "value": 16.60,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "United States 2025 (est.)",
+          "value": 19.00,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Taiwan 2024",
+          "value": 1.61,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Taiwan 2025 (Jan-Nov)",
+          "value": 2.647,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Hong Kong 2024",
+          "value": 1.17,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Singapore 2024",
+          "value": 0.8148,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Canada 2024",
+          "value": 0.466,
+          "unitText": "Billion USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Malaysia 2024",
+          "value": 0.345,
+          "unitText": "Billion USD"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://3ja.com/#howto-report",
+      "name": "How to Report Scam Ads",
+      "description": "Step-by-step guide to reporting scam ads to StopScamAds",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Record the Scam Ad",
+          "text": "Use screen recording to capture the scam ad on your device",
+          "url": "https://3ja.com/#submit"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Upload Recording",
+          "text": "Upload your screen recording to Google Drive, Dropbox, OneDrive, iCloud Drive, or WeTransfer and set sharing to 'Anyone with the link can view'",
+          "url": "https://3ja.com/#submit"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Submit Form",
+          "text": "Fill out the submission form at 3ja.com with your contact information, platform type, and recording link",
+          "url": "https://3ja.com/#submit"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Complete Verification",
+          "text": "Complete the Cloudflare Turnstile verification to prevent spam",
+          "url": "https://3ja.com/#submit"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Submit Report",
+          "text": "Submit your report. All submissions are used for research and public reporting (anonymized)",
+          "url": "https://3ja.com/#submit"
+        }
+      ]
+    }
+  ]
+}
